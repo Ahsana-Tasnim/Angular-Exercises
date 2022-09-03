@@ -1,0 +1,55 @@
+<div style="text-align: center;">
+    <h5 style="margin: 5rem auto; min-width: 45rem;">{{this.title}}</h5>
+
+    <!-- Positioning using flex -->
+    <div style="display: flex; align-items: flex-start; min-width: 45rem; width: 60%; margin: auto;">
+        
+        <!-- Coloumn 1 Controls -->
+        <div style="margin: 0 auto;">
+            <h5>Choose Account Type</h5>
+
+            <!-- Radio Buttons -->
+            <div style="width: 100%; padding: 2em; text-align: left; border: 1px solid rgb(169, 169, 169);">
+                <input name="rdoAccount" type="radio" (click)="accountSelected(savingsAccount)"> Savings Account
+                <br>
+                <input name="rdoAccount" type="radio" (click)="accountSelected(chequingAccount)"> Chequing Account
+            </div>
+
+            <p style="text-align: left; margin-top: 0.7rem;">
+                Amount
+            </p>
+            <p>
+                <!-- Two way binding to the amount property -->
+                <input style="width: 100%;" [(ngModel)]="amount" type="text">
+            </p>
+            <p>
+                <input type="button" (click)="withdraw()" value="Withdrawal">
+                <input type="button" (click)="deposit()" value="Deposit">
+            </p>
+
+            <!-- The erros will show here -->
+            <p style="color: red;">{{error}}</p>
+        </div>
+
+        <!-- Column 2 Savings Account -->
+        <div style="margin: 0 auto;">
+            <h5>Savings Transactions</h5>
+            <select size="9" style="width:100%;padding-left: 1em;">
+                <option *ngFor="let transaction of savingsAccount.transactions">{{transaction.toString()}}</option>
+            </select>
+            <h5>Current Balance</h5>
+            <p>{{savingsAccount.accountBalance | currency : 'USD' : 'symbol' : '1.2-2'}}</p>
+        </div>
+
+        <!-- Column 3 Chequing Account -->
+        <div style="margin: 0 auto;">
+            <h5>Chequing Account</h5>
+            <select size="9" style="width:100%;padding-left: 1em;">
+                <option *ngFor="let transaction of chequingAccount.transactions">{{transaction.toString()}}</option>
+            </select>
+            <h5>Current Balance</h5>
+            <p>{{chequingAccount.accountBalance | currency : 'USD' : 'symbol' : '1.2-2'}}</p>
+        </div>
+        
+    </div>
+</div>

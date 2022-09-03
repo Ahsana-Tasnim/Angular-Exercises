@@ -1,0 +1,9 @@
+<div *ngIf="!foos.length">No Foos</div>
+
+<ul>
+    <li *ngFor="let foo of foos"
+        [ngStyle]="{'color': foo.color, 'font-size': foo.height + 'px'}">
+
+        {{foo.name}}
+    </li>
+</ul>

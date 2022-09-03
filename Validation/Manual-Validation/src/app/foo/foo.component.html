@@ -1,0 +1,22 @@
+<table>
+<tr>
+    <td>Name:</td>
+    <td><input type="text" [(ngModel)]="foo.name"></td>
+</tr>
+<tr>
+    <td>Height:</td>
+    <td><input type="text" [(ngModel)]="foo.height"></td>
+</tr>
+<tr>
+    <td>Color:</td>
+    <td><input type="text" [(ngModel)]="foo.color"></td>
+</tr>
+</table>    
+
+<button (click) ="createFoo()">Create</button>
+
+<div *ngIf="message!=''">{{message}}</div>
+
+<ul *ngIf="fooService.errors.length" style="color:red;">
+<li *ngFor="let error of fooService.errors">{{error}}</li>
+</ul>

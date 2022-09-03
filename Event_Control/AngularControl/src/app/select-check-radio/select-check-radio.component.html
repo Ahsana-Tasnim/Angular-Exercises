@@ -1,0 +1,33 @@
+<select name="" id=""
+#vehicleMakeDDL
+(change)="onSelected(vehicleMakeDDL.value)">
+<option>--Select a Make--</option>
+<option *ngFor="let m of VehicleMake" value="{{m.id}}">{{m.name}}</option>
+</select>
+
+<div *ngIf="selectedMake">
+    selected Id: {{selectedMake.id}}
+    <br>
+    selected Make: {{selectedMake.name}}
+    <br>
+    <img *ngIf="selectedMake.logo" src="{{selectedMake.logo}}">
+    
+<br><br>
+
+
+<input type="checkbox"
+[checked]="selectedMake.available"
+(change="selectedMake.available")>
+<br><br>
+
+<input type="radio" name="av"
+[checked]="selectedMake.available"
+(change)="selectedMake.available = !selectedMake.available">Available
+<br>
+
+<input type="radio" name="av"
+[checked]="!selectedMake.available"
+(change)="selectedMake.available = !selectedMake.available">Not available
+</div>
+<br><br>
+

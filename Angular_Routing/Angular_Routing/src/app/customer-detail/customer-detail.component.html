@@ -1,0 +1,13 @@
+<h2 class="center">Customer Details</h2>
+
+<div *ngIf="message" style="color: red;">{{message}}</div>
+
+<div *ngIf="customer">
+    {{customer.id}}<br>
+    {{customer.firstName}}<br>
+    {{customer.lastName}}<br>
+    {{customer.address}}<br>
+    {{customer.phone}}<br>
+</div>
+
+<div *ngIf="!customer">Customer Not Found</div>

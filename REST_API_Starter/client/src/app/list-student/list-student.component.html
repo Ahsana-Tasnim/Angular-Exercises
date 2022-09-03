@@ -1,0 +1,27 @@
+<!--Rendering the student list in a table-->
+
+<div *ngIf="student" class="card-container">
+    <div>
+        <table class="centered">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th></th>
+            </tr>
+
+            <tr *ngFor="let student of student">
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.password}}</td>
+
+                <td>
+                    <!--Delete Button for students providing student id-->
+                    <button class="btn btn-delete">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

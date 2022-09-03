@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "62eabdae4c03f7a946bde3f6"
+  },
+  "country": "United States",
+  "currencyCode": "USD",
+  "name": "US Dollar",
+  "modifiedDate": {
+    "$date": {
+      "$numberLong": "1659551142994"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62eb0a9427a4c4643419370c"
+  },
+  "country": "Australia",
+  "currencyCode": "AUD",
+  "name": "Aus dollar",
+  "modifiedDate": {
+    "$date": {
+      "$numberLong": "1659570255123"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62eb297d3b7fd2b2cb5f7ac7"
+  },
+  "country": "Canada",
+  "currencyCode": "CAD",
+  "name": "Canadian Dollar",
+  "modifiedDate": {
+    "$date": {
+      "$numberLong": "1659578541651"
+    }
+  },
+  "__v": 0
+}]

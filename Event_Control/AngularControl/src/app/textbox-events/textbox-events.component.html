@@ -1,0 +1,33 @@
+<div>
+    <input type="text"
+    (keyup)="onKeyup($event)"><br>
+    Text: {{this.keyUpMessage}}
+</div><br>
+<div>
+    keyCode: {{keyCode}}
+</div>
+
+<br /><br />
+
+<div>
+    <input type="text"
+    #myTextBox
+    (keyup)="onKeyUpInputAsVariable(myTextBox.value)">
+    <br />
+    {{keyUpMessageInputAsAvariable}}
+</div><br /><br />
+
+<div>
+    <input type="text" 
+    #myTextbox
+    (keyup.enter)="onEnter(myTextbox.value)">
+    <br />
+    {{keyEnterMessage}}
+</div><br /><br />
+
+<div>
+    <input type="text"
+    #myTextBox2
+    (blur)="onLeave(myTextBox2.value)"><br />
+    {{onLeaveValue}}
+</div><br /><br />
